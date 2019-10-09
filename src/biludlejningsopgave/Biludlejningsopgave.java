@@ -20,20 +20,20 @@ public class Biludlejningsopgave {
         System.out.println("Total afgift for alle biler: " + bilpark.beregnGrønAfgiftForBilpark() );
         
         // Printer ejerafgiften for hver enkel bil
-        /*for(int i = 0; i < bilpark.getGarageSize() ; i++) {
+        for(int i = 0; i < bilpark.getGarageSize() ; i++) {
             Bil tempBil = bilpark.getBilAt(i);
             System.out.println("Bil: "+ tempBil.getMærke() + "Ejerafgift: " + tempBil.beregnGrønEjerafgift());
-        } */
+        }
         
         // Printer hver del i udregningen af Wh pr km udregningen, så den kan eftertjekkes
-        /*ElBil tempBil2 = (ElBil) bilpark.getBilAt(5);
+        ElBil tempBil2 = (ElBil) bilpark.getBilAt(5);
         System.out.println("Kapacitet: " + tempBil2.getBatterikapacitetKWh());
         System.out.println("Rækkevidde: " + tempBil2.getMaxKm());
-        System.out.println("Watt pr. km: " + tempBil2.getWhPrKm()); */
+        System.out.println("Watt pr. km: " + tempBil2.getWhPrKm());
         
         // Laver en bil med en km pr. liter på under 0, for at tjekke fejlhåndteringen i garagen.
-        /*bilpark.tilføjBil(new BenzinBil("TE5781L", 1980, 3, "Matra", "Murena", 95, -15));
-        System.out.println("Total afgift for alle biler: " + bilpark.beregnGrønAfgiftForBilpark() ); */
+        bilpark.tilføjBil(new BenzinBil("TE5781L", 1980, 3, "Matra", "Murena", 95, -15));
+        System.out.println("Total afgift for alle biler: " + bilpark.beregnGrønAfgiftForBilpark() );
     }
 
 }
